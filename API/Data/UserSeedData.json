@@ -108,7 +108,7 @@
           "Country": "China",
           "Photos": [
             {
-              "Url": "https://randomuser.me/api/portraits/male/28.jpg",
+              "Url": "https://randomuser.me/api/portraits/men/28.jpg",
               "IsMain": true
             }
           ]
@@ -127,7 +127,7 @@
           "Country": "Slovak Republic",
           "Photos": [
             {
-              "Url": "https://randomuser.me/api/portraits/male/12.jpg",
+              "Url": "https://randomuser.me/api/portraits/men/12.jpg",
               "IsMain": true
             }
           ]
@@ -146,7 +146,7 @@
           "Country": "Portugal",
           "Photos": [
             {
-              "Url": "https://randomuser.me/api/portraits/male/77.jpg",
+              "Url": "https://randomuser.me/api/portraits/men/77.jpg",
               "IsMain": true
             }
           ]
@@ -165,7 +165,7 @@
           "Country": "Namibia",
           "Photos": [
             {
-              "Url": "https://randomuser.me/api/portraits/male/25.jpg",
+              "Url": "https://randomuser.me/api/portraits/men/25.jpg",
               "IsMain": true
             }
           ]
@@ -184,7 +184,7 @@
           "Country": "Yemen",
           "Photos": [
             {
-              "Url": "https://randomuser.me/api/portraits/male/92.jpg",
+              "Url": "https://randomuser.me/api/portraits/men/92.jpg",
               "IsMain": true
             }
           ]
