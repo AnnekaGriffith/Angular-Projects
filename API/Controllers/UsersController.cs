@@ -48,7 +48,9 @@ namespace API.Controllers
         [HttpGet("{username}", Name = "GetUser")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
-            return await _unitOfWork.UserRepository.GetMemberAsync(username);
+            var currentUser = User.GetUsername();
+            return await _unitOfWork.UserRepository
+                .GetMemberAsync(username, isCurrentUser: currentUser == username);
         }
         [HttpPut]
         public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto)
@@ -59,6 +61,7 @@ namespace API.Controllers
             if (await _unitOfWork.Complete()) return NoContent();
             return BadRequest("Failed to update user");
         }
+        
         [HttpPost("add-photo")]
         public async Task<ActionResult<PhotoDto>> AddPhoto(IFormFile file)
         {
@@ -70,10 +73,7 @@ namespace API.Controllers
                 Url = result.SecureUrl.AbsoluteUri,
                 PublicId = result.PublicId
             };
-            if (user.Photos.Count == 0)
-            {
-                photo.IsMain = true;
-            }
+            
             user.Photos.Add(photo);
             if (await _unitOfWork.Complete())
             {
@@ -82,6 +82,7 @@ namespace API.Controllers
 
             return BadRequest("Problem addding photo");
         }
+
         [HttpPut("set-main-photo/{photoId}")]
         public async Task<ActionResult> SetMainPhoto(int photoId)
         {
