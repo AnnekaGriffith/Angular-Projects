@@ -1,6 +1,10 @@
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
   <div class="container">
       <a role="navigation" aria-label="homepage" class="navbar-brand" routerLink='/' routerLinkActive='active'>King of the Hill Dating App</a>
+        <div class="skip">
+            <a href="#content">Skip to main content</a>
+        </div>
       <ul class="navbar-nav mr-auto">
           <ng-container *ngIf="accountService.CurrentUser$ | async">
               <li class="nav-item">

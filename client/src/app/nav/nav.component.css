@@ -6,6 +6,25 @@ img {
     border: 2px solid #fff;
     display: inline;
 }
+.skip a{
+    position: absolute;
+    left: 10000px;
+    top:auto;
+    width:1px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 1em;
+    background: white;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
 *:focus {
     outline: 4px solid purple;
+}
+.skip a:focus{
+    position: static;
+    width: auto;
+    height: auto;
+
 }

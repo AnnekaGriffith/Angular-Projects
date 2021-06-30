@@ -1,3 +1,4 @@
+<main>
 <div class="row">
     <div class="col-4">
         <div class="card">
@@ -9,7 +10,7 @@
                 </div>
                 <div>
                     <strong>Location:</strong>
-                    <p>{{member.city}}, {{member.country}}</p>
+                    <p>{{member.city}}, {{member.state}}</p>
                 </div>
                 <div>
                     <strong>Age:</strong>
@@ -36,9 +37,9 @@
         <tabset class="member-tabset" #memberTabs>
             <tab heading='About {{member.knownAs}}' (selectTab)="onTabActivated($event)">
                 <h4>Description</h4>
-                <p>{{member.introduction}}</p>
+                <p>{{member.bio}}</p>
                 <h4>Looking for</h4>
-                <p>{{member.lookingFor}}</p>
+                <p>{{member.careers}}</p>
             </tab>
             <tab heading='Interests' (selectTab)="onTabActivated($event)">
                 <h4>Interests</h4>
@@ -54,3 +55,4 @@
         </tabset>
     </div>
 </div>
+</main>

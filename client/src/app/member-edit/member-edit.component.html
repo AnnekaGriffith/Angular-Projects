@@ -14,7 +14,7 @@
             <div class="card-body">
                 <div>
                     <strong>Location:</strong>
-                    <p>{{member.city}}, {{member.country}}</p>
+                    <p>{{member.city}}, {{member.state}}</p>
                 </div>
                 <div>
                     <strong>Age:</strong>
@@ -39,17 +39,17 @@
             <tab heading='About {{member.knownAs}}'>
                 <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
                     <h4>Description</h4>
-                    <textarea class="form-control" [(ngModel)]="member.introduction" name="introduction" rows="6"></textarea>
+                    <textarea class="form-control" [(ngModel)]="member.bio" name="bio" rows="6"></textarea>
                     <h4 class="mt-2">Looking for</h4>
-                    <textarea class="form-control" [(ngModel)]="member.lookingFor" name="lookingFor" rows="6"></textarea>
+                    <textarea class="form-control" [(ngModel)]="member.careers" name="careers" rows="6"></textarea>
                     <h4 class="mt-2">Interests</h4>
                     <textarea class="form-control" [(ngModel)]="member.interests" name="interests" rows="6"></textarea>
                     <h4 class="mt-2">Location Details: </h4>
                     <div class="form-inline">
                         <label for="city">City: </label>
                         <input [(ngModel)]="member.city" type="text" name="city" class="form-control mx-2">
-                        <label for="city">Country: </label>
-                        <input [(ngModel)]="member.country" type="text" name="country" class="form-control mx-2">
+                        <label for="city">State: </label>
+                        <input [(ngModel)]="member.state" type="text" name="state" class="form-control mx-2">
                     </div>
                 </form>
                

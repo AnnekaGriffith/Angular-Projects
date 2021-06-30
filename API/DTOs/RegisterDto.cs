@@ -9,7 +9,7 @@ namespace API.DTOs
         [Required] public string Gender { get; set; }
         [Required] public DateTime DateofBirth { get; set; }
         [Required] public string City { get; set; }
-        [Required] public string Country { get; set; }
+        [Required] public string State { get; set; }
         
 
         [Required]

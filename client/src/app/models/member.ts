@@ -9,10 +9,10 @@ export interface Member {
     created: Date;
     lastActive: Date;
     gender: string;
-    introduction: string;
-    lookingFor: string;
+    bio: string;
+    careers: string;
     interests: string;
     city: string;
-    country: string;
+    state: string;
     photos: Photo[];
   }
